@@ -1,0 +1,41 @@
+﻿@model IEnumerable<CampingdoZe2.Models.Produto>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center><h2>Produtos</h2></center>
+
+@if (@Model.Any())
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr><th>Id</th>
+                <th>Nome</th>
+                <th>Quantidade</th>
+                <th>Valor</th>
+                <th>Remover</th>
+                <th>Editar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var produto in Model)
+            {
+                <tr>
+
+                    <td>@produto.Id</td>
+                    <td>@produto.Nome</td>
+                    <td>@produto.Quantidade</td>
+                    <td>@produto.Valor</td>
+                    <td width="5px"><input type="button" name="botao-ok" value="Remover"></td>
+                    <td width="5px"><a href="/Produtos/edit/@produto.Id"><input type="button" name="botao-ok" value="Editar"></a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Não temos nenhum produto cadastrado</p>
+}

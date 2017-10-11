@@ -1,0 +1,16 @@
+﻿@model CampingdoZe2.ViewModels.ProdutoFormViewModels
+@{
+    ViewBag.Title = Model.Title;
+}
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Save", "Produtos"))
+{
+    @Html.HiddenFor(m => m.Produto.Id)
+    <div class="form-group">
+        @Html.LabelFor(m => m.Produto.Nome)
+        @Html.TextBoxFor(m => m.Produto.Nome, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+}
