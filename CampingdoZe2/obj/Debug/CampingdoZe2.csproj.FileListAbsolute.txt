@@ -55,3 +55,4 @@ c:\users\lucas.braun\documents\visual studio 2013\Projects\CampingdoZe2\Campingd
 c:\users\lucas.braun\documents\visual studio 2013\Projects\CampingdoZe2\CampingdoZe2\obj\Debug\CampingdoZe2.pdb
 c:\users\lucas.braun\documents\visual studio 2013\Projects\CampingdoZe2\CampingdoZe2\obj\Debug\CampingdoZe2.Migrations.atividades.resources
 c:\users\lucas.braun\documents\visual studio 2013\Projects\CampingdoZe2\CampingdoZe2\obj\Debug\CampingdoZe2.csproj.GenerateResource.Cache
+C:\Users\lucas.braun\Documents\Visual Studio 2013\Projects\CampingdoZe2\CampingdoZe2\obj\Debug\CampingdoZe2.Migrations.mudancas.resources

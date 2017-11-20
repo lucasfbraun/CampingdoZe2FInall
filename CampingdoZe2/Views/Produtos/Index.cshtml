@@ -21,19 +21,20 @@
         </thead>
         <tbody>
             @foreach (var produto in Model)
-            {
-                <tr>
+{
+    <tr>
 
-                    <td>@produto.Id</td>
-                    <td>@produto.Nome</td>
-                    <td>@produto.Quantidade</td>
-                    <td>@produto.Valor</td>
-                    <td width="5px"><input type="button" name="botao-ok" value="Remover"></td>
-                    <td width="5px"><a href="/Produtos/edit/@produto.Id"><input type="button" name="botao-ok" value="Editar"></a></td>
-                </tr>
-            }
+        <td>@produto.Id</td>
+        <td>@produto.Nome</td>
+        <td>@produto.Quantidade</td>
+        <td>@produto.Valor</td>
+        <td width="5px"><a href="/Produtos/delete/@produto.Id"><input type="button" value="Remover"></a></td>
+        <td width="5px"><a href="/Produtos/edit/@produto.Id"><input type="button" name="botao-ok" value="Editar"></a></td>
+            </tr>
+}
         </tbody>
     </table>
+     @Html.ActionLink("Novo Produto", "New", null, new { @class = "btn btn-primary" })
 }
 else
 {

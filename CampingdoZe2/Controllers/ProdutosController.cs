@@ -82,5 +82,18 @@ namespace CampingdoZe2.Controllers
             return View("ProdutoForm", viewModel);
         }
 
+        public ActionResult Delete(int id)
+        {
+            var produto = _context.Produtos.SingleOrDefault(c => c.Id == id);
+
+            if (produto == null)
+                return HttpNotFound();
+
+            _context.Produtos.Remove(produto);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
     }
 }

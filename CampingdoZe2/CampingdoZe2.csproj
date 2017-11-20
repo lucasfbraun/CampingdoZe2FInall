@@ -169,6 +169,10 @@
     <Compile Include="Migrations\201710052304364_atividades.Designer.cs">
       <DependentUpon>201710052304364_atividades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710312322291_mudancas.cs" />
+    <Compile Include="Migrations\201710312322291_mudancas.Designer.cs">
+      <DependentUpon>201710312322291_mudancas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -176,6 +180,7 @@
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
     <Compile Include="ViewModels\CustomersIndexViewModel.cs" />
     <Compile Include="ViewModels\ProdutoFormViewModels.cs" />
     <Compile Include="ViewModels\ProdutosIndexViewModel.cs" />
@@ -232,6 +237,7 @@
     <Content Include="Views\Produtos\Index.cshtml" />
     <Content Include="Views\Produtos\Details.cshtml" />
     <Content Include="Views\Produtos\ProdutoForm.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -246,6 +252,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201710052304364_atividades.resx">
       <DependentUpon>201710052304364_atividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710312322291_mudancas.resx">
+      <DependentUpon>201710312322291_mudancas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

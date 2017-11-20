@@ -26,8 +26,8 @@
                     <td>@cliente.Id</td>
                     <td>@Html.ActionLink(@cliente.Nome, "Details", new { cliente.Id })</td>
                     <td>@cliente.cpf</td>
-                    <td></td>
-                    <td></td>
+                    <td width="5px"><a href="/Customers/Delete/@cliente.Id"><input type="button" name="botao-ok" value="Remover"></a></td>
+                    <td width="5px"><a href="/Customers/edit/@cliente.Id"><input type="button" name="botao-ok" value="Editar"></a></td>
                 </tr>
             }
         </tbody>
