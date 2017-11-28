@@ -5,8 +5,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <center><h2>Clientes</h2></center>
 
+
+
+@Html.ActionLink("Novo Cliente", "New2", null, new { @class = "btn btn-primary" })
+</br></br>
 @if (@Model.Any())
 {
     <table class="table table-bordered table-hover">

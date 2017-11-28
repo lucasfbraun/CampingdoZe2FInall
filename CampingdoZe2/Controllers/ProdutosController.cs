@@ -74,14 +74,14 @@ namespace CampingdoZe2.Controllers
         }
         public ActionResult New()
         {
+
             var viewModel = new ProdutoFormViewModels
             {
-
+                Produto = new Produto()
             };
 
             return View("ProdutoForm", viewModel);
         }
-
         public ActionResult Delete(int id)
         {
             var produto = _context.Produtos.SingleOrDefault(c => c.Id == id);

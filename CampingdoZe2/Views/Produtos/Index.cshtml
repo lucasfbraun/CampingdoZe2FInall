@@ -7,9 +7,13 @@
 
 <center><h2>Produtos</h2></center>
 
+
+@Html.ActionLink("Novo Produto", "New", null, new { @class = "btn btn-primary" })
+</br></br>
+
 @if (@Model.Any())
 {
-    <table class="table table-bordered table-hover">
+    <table class="container">
         <thead>
             <tr><th>Id</th>
                 <th>Nome</th>
@@ -23,9 +27,8 @@
             @foreach (var produto in Model)
 {
     <tr>
-
         <td>@produto.Id</td>
-        <td>@produto.Nome</td>
+        <td>@Html.ActionLink(@produto.Nome, "Details", new { produto.Id })</td>
         <td>@produto.Quantidade</td>
         <td>@produto.Valor</td>
         <td width="5px"><a href="/Produtos/delete/@produto.Id"><input type="button" value="Remover"></a></td>
@@ -34,7 +37,7 @@
 }
         </tbody>
     </table>
-     @Html.ActionLink("Novo Produto", "New", null, new { @class = "btn btn-primary" })
+    
 }
 else
 {

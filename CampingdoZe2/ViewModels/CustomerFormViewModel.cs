@@ -9,12 +9,12 @@ namespace CampingdoZe2.ViewModels
     public class CustomerFormViewModel
     {
 
-        public Customer Customers { set; get; }
+        public Customer Customer { set; get; }
         public string Title
         {
             get
             {
-                if (Customers != null && Customers.Id != 0)
+                if (Customer != null && Customer.Id != 0)
                     return "Editar Cliente";
 
                 return "Novo cliente";

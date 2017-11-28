@@ -11,7 +11,7 @@ namespace CampingdoZe2.Controllers
 {
     public class CustomersController : Controller
     {
-       private ApplicationDbContext _context;
+        private ApplicationDbContext _context;
 
         public CustomersController()
         {
@@ -42,13 +42,8 @@ namespace CampingdoZe2.Controllers
             if (cliente == null)
                 return HttpNotFound();
 
-            var viewModel = new CustomerFormViewModel
-            {
-              Customers = cliente
 
-            };
-
-            return View("CustomerForm", viewModel);
+            return View("CustomerForm", cliente);
         }
         [HttpPost] // só será acessada com POST
         public ActionResult Save(Customer cliente)
@@ -69,15 +64,6 @@ namespace CampingdoZe2.Controllers
             // Voltamos para a lista de clientes
             return RedirectToAction("Index");
         }
-        public ActionResult New()
-        {
-            var viewModel = new CustomerFormViewModel
-            {
-
-            };
-
-            return View("CustomerForm", viewModel);
-        }
         public ActionResult Delete(int id)
         {
             var cliente = _context.Customers.SingleOrDefault(c => c.Id == id);
@@ -89,6 +75,15 @@ namespace CampingdoZe2.Controllers
             _context.SaveChanges();
 
             return RedirectToAction("Index");
+        }
+        public ActionResult New2()
+        {
+            var cliente = new CustomerFormViewModel
+            {
+                Customer = new Customer()
+            };
+
+            return View("FormCustomer", cliente);
         }
 
     }
