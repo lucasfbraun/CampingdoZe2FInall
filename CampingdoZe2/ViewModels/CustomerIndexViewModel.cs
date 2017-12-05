@@ -9,6 +9,6 @@ namespace CampingdoZe2.ViewModels
 {
     public class CustomersIndexViewModel
     {
-        public List<Customer> Customer { get; set; }
+        public List<Customer> Customers { get; set; }
     }
 }

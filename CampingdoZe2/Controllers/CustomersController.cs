@@ -1,11 +1,10 @@
-﻿using System;
+﻿using CampingdoZe2.Models;
+using CampingdoZe2.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using CampingdoZe2.Models;
-using System.Data.Entity;
-using CampingdoZe2.ViewModels;
 
 namespace CampingdoZe2.Controllers
 {
@@ -23,9 +22,11 @@ namespace CampingdoZe2.Controllers
         }
         public ActionResult Index()
         {
-            var customers = _context.Customers.ToList();
-            return View(customers);
+            var clientes = _context.Customers.ToList();
+
+            return View(clientes);
         }
+
         public ActionResult Details(int id)
         {
             var cliente = _context.Customers.SingleOrDefault(c => c.Id == id);
@@ -42,21 +43,26 @@ namespace CampingdoZe2.Controllers
             if (cliente == null)
                 return HttpNotFound();
 
+            var viewModel = new CustomerFormViewModel
+            {
+                Customer = cliente
 
-            return View("CustomerForm", cliente);
+            };
+
+            return View("FormCustomer", viewModel);
         }
         [HttpPost] // só será acessada com POST
-        public ActionResult Save(Customer cliente)
+        public ActionResult Save(Customer customer)
         {
-            if (cliente.Id == 0)
+            if (customer.Id == 0)
             {
-                _context.Customers.Add(cliente);
+                _context.Customers.Add(customer);
             }
             else
             {
-                var clienteInDb = _context.Customers.Single(c => c.Id == cliente.Id);
+                var customerInDb = _context.Produtos.Single(c => c.Id == customer.Id);
 
-                clienteInDb.Nome = cliente.Nome;
+                customerInDb.Nome = customer.Nome;
             }
 
             // faz a persistência
@@ -64,26 +70,27 @@ namespace CampingdoZe2.Controllers
             // Voltamos para a lista de clientes
             return RedirectToAction("Index");
         }
-        public ActionResult Delete(int id)
+        public ActionResult New()
         {
-            var cliente = _context.Customers.SingleOrDefault(c => c.Id == id);
 
-            if (cliente == null)
-                return HttpNotFound();
-
-            _context.Customers.Remove(cliente);
-            _context.SaveChanges();
-
-            return RedirectToAction("Index");
-        }
-        public ActionResult New2()
-        {
-            var cliente = new CustomerFormViewModel
+            var viewModel = new CustomerFormViewModel
             {
                 Customer = new Customer()
             };
 
-            return View("FormCustomer", cliente);
+            return View("FormCustomer", viewModel);
+        }
+        public ActionResult Delete(int id)
+        {
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+
+            if (customer == null)
+                return HttpNotFound();
+
+            _context.Customers.Remove(customer);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
         }
 
     }

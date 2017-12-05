@@ -7,8 +7,8 @@ using System.Web.Mvc;
 
 namespace CampingdoZe2.ViewModels
 {
-    public class CustomersIndexViewModel
+    public class TipoProdutoIndexViewModel
     {
-        public List<Customer> Customer { get; set; }
+        public List<TipoProduto> TipoProdutos { get; set; }
     }
 }
