@@ -24,6 +24,8 @@ namespace CampingdoZe2.Models
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Produto> Produtos { get; set; }
 
+        public DbSet<TipoProduto> TipoProdutos { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection")
         {

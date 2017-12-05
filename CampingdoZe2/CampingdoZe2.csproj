@@ -194,6 +194,10 @@
     <Compile Include="Migrations\201712052222434_atualizacaooo.Designer.cs">
       <DependentUpon>201712052222434_atualizacaooo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712052312474_segundo.cs" />
+    <Compile Include="Migrations\201712052312474_segundo.Designer.cs">
+      <DependentUpon>201712052312474_segundo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -297,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712052222434_atualizacaooo.resx">
       <DependentUpon>201712052222434_atualizacaooo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712052312474_segundo.resx">
+      <DependentUpon>201712052312474_segundo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
