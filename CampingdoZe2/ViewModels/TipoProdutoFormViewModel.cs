@@ -6,10 +6,10 @@ using CampingdoZe2.Models;
 
 namespace CampingdoZe2.ViewModels
 {
-    public class TipoProdutoFormViewModel 
+    public class TipoProdutoFormViewModel
     {
-         public TipoProduto TipoProduto { set; get; }
-         public string Title
+        public TipoProduto TipoProduto { set; get; }
+        public string Title
         {
             get
             {
@@ -18,5 +18,6 @@ namespace CampingdoZe2.ViewModels
 
                 return "Novo tipo de produto";
             }
+        }
     }
 }

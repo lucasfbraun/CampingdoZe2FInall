@@ -12,6 +12,6 @@ namespace CampingdoZe2.ViewModels
         public Produto Produto { get; set; }
         public List<Customer> Customers { get; set; }
 
-        public List<TipoProduto> TipoProdutos { get;set; }
+        public List<TipoProduto>TipoProdutos { get;set; }
     }
 }
