@@ -60,7 +60,7 @@ namespace CampingdoZe2.Controllers
             }
             else
             {
-                var customerInDb = _context.Produtos.Single(c => c.Id == customer.Id);
+                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
 
                 customerInDb.Nome = customer.Nome;
             }

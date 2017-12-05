@@ -36,6 +36,7 @@ namespace CampingdoZe2.Controllers
             return View();
         }
 
+
         //
         // POST: /Account/Login
         [HttpPost]
@@ -82,7 +83,13 @@ namespace CampingdoZe2.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInAsync(user, isPersistent: false);
+// Código temporário
+//var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());
+//var roleManager = new RoleManager<IdentityRole>(roleStore);
+//await roleManager.CreateAsync(new IdentityRole("CanManageCustomers"));
+//await UserManager.AddToRoleAsync(user.Id, "CanManageCustomers");
+
+                   await SignInAsync(user, isPersistent: false);
                     return RedirectToAction("Index", "Home");
                 }
                 else
