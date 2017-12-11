@@ -18,6 +18,10 @@ namespace CampingdoZe2.Models
 
         public double Valor { get; set; }
 
+        public TipoProduto TipoProduto {get; set;}
+
+        public int TipoProdutoesId { get; set; } 
+
 
     }
 }

@@ -62,3 +62,5 @@ C:\Users\lucas.braun\Documents\Visual Studio 2013\Projects\CampingdoZe2\Campingd
 C:\Users\lucas.braun\Documents\Visual Studio 2013\Projects\CampingdoZe2\CampingdoZe2\obj\Debug\CampingdoZe2.Migrations.tipoproduto.resources
 C:\Users\lucas.braun\Documents\Visual Studio 2013\Projects\CampingdoZe2\CampingdoZe2\obj\Debug\CampingdoZe2.Migrations.atualizacaooo.resources
 C:\Users\lucas.braun\Documents\Visual Studio 2013\Projects\CampingdoZe2\CampingdoZe2\obj\Debug\CampingdoZe2.Migrations.segundo.resources
+C:\Users\lucas.braun\Documents\Visual Studio 2013\Projects\CampingdoZe2\CampingdoZe2\obj\Debug\CampingdoZe2.Migrations.teste.resources
+C:\Users\lucas.braun\Documents\Visual Studio 2013\Projects\CampingdoZe2\CampingdoZe2\obj\Debug\CampingdoZe2.Migrations.teste123.resources
